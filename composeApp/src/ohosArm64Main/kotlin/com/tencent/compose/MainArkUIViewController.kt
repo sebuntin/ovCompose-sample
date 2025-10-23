@@ -20,6 +20,9 @@ package com.tencent.compose
 import androidx.compose.ui.arkui.RenderingBackend
 import androidx.compose.ui.window.ComposeArkUIViewController
 import com.tencent.compose.sample.NativeResourceManager
+import com.tencent.compose.sample.mainpage.BoxExample
+import com.tencent.compose.sample.mainpage.ColumnExample
+import com.tencent.compose.sample.mainpage.LazyListExample
 import com.tencent.compose.sample.mainpage.MainPage
 import com.tencent.compose.sample.mainpage.ThreeBoxesExample
 import com.tencent.compose.sample.nativeResourceManager
@@ -40,6 +43,9 @@ fun MainArkUIViewController(env: napi_env): napi_value {
     }) {
         ThreeBoxesExample()
 //        MainPage()
+//        LazyListExample()
+//        ColumnExample()
+//        BoxExample()
     }
 }
 

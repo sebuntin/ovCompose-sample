@@ -17,7 +17,7 @@
 
 import { Compose } from 'compose';
 import { MainArkUIViewController } from 'libentry.so';
-import { registerComposeInteropBuilder } from 'compose/src/main/ets/compose/ArkUIView';
+import { registerComposeInteropBuilder } from 'compose/src/main/ets/compose/ArkUIViewV2';
 import {
   buttonBuilder,
   textBuilder,
@@ -27,6 +27,7 @@ import {
   layerBuilder,
   verticalListBuilder,
   horizontalListBuilder,
+  SimpleVideoBuilder
 } from './ComposeInterops';
 
 export function registerComposeInteropBuilders() {
@@ -38,4 +39,5 @@ export function registerComposeInteropBuilders() {
   registerComposeInteropBuilder('text', textBuilder)
   registerComposeInteropBuilder('verticalList', verticalListBuilder)
   registerComposeInteropBuilder('horizontalList', horizontalListBuilder)
+  registerComposeInteropBuilder('simpleVideo', SimpleVideoBuilder)
 }

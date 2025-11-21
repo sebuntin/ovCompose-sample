@@ -43,36 +43,49 @@ import kotlinx.cinterop.ExperimentalForeignApi
 @OptIn(ExperimentalForeignApi::class)
 @Composable
 internal fun InteropTextInput() {
-    Column(Modifier.fillMaxWidth().fillMaxHeight().padding(30.dp)) {
 
-        var inputText by remember { mutableStateOf("混排状态变量双向通信 输入文本...") }
+//    var inputText by remember { mutableStateOf("混排状态变量双向通信 输入文本...") }
+//
+//    val state = remember(inputText) {
+//        //js { "text"(inputText) }
+//    }
 
-        val state = remember(inputText) {
-            js { "text"(inputText) }
-        }
-
+    //Column(Modifier.fillMaxWidth().fillMaxHeight().padding(30.dp)) {
         ArkUIView(
-            name = "textInput",
-            modifier = Modifier.width(450.dp).wrapContentHeight(),
-            parameter = state,
-            update = {
-                inputText = it["text"].asString().toString()
-            }
+            name = "simpleVideo",
+            modifier = Modifier.width(450.dp).height(300.dp),
+            parameter = js{
+//                "text"("ArkUI Button")
+//                "backgroundColor"("#FF0000FF")
+                          },
+//            update = {
+//                //inputText = it["text"].asString().toString()
+//            }
         )
 
-        Spacer(modifier = Modifier.height(50.dp))
-
-        Text(text = "Compose组件更新:", color = Color.Gray)
-
-        Text(
-            text = inputText,
-            modifier = Modifier.fillMaxWidth()
-                .border(width = 1.dp, color = Color.Gray)
-                .padding(10.dp)
-        )
-
-        Button(onClick = { inputText += "[文本]" }) {
-            Text("Append Text")
-        }
-    }
+//        ArkUIView(
+//            name = "textInput",
+//            modifier = Modifier.width(450.dp).wrapContentHeight(),
+//            parameter = js{ },
+//                //state,
+//            update = {
+//                inputText = it["text"].asString().toString()
+//            }
+//        )
+//
+//        Spacer(modifier = Modifier.height(50.dp))
+//
+//        Text(text = "Compose组件更新:", color = Color.Gray)
+//
+//        Text(
+//            text = inputText,
+//            modifier = Modifier.fillMaxWidth()
+//                .border(width = 1.dp, color = Color.Gray)
+//                .padding(10.dp)
+//        )
+//
+//        Button(onClick = { inputText += "[文本]" }) {
+//            Text("Append Text")
+//        }
+    //}
 }

@@ -25,6 +25,9 @@ import com.tencent.compose.sample.mainpage.ColumnExample
 import com.tencent.compose.sample.mainpage.LazyListExample
 import com.tencent.compose.sample.mainpage.MainPage
 import com.tencent.compose.sample.mainpage.ThreeBoxesExample
+import com.tencent.compose.sample.mainpage.sectionItem.ComposeView1500Page
+import com.tencent.compose.sample.InteropTextInput
+import com.tencent.compose.sample.InteropListNested
 import com.tencent.compose.sample.nativeResourceManager
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.coroutines.initMainHandler
@@ -41,7 +44,10 @@ fun MainArkUIViewController(env: napi_env): napi_value {
     return ComposeArkUIViewController(env, configure = {
         renderingBackend = RenderingBackend.ArkUIRenderNode
     }) {
-        ThreeBoxesExample()
+//          InteropListNested()
+        InteropTextInput()
+//        ComposeView1500Page()
+//        ThreeBoxesExample()
 //        MainPage()
 //        LazyListExample()
 //        ColumnExample()

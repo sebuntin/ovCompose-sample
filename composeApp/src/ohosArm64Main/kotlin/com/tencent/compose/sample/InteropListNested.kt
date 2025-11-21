@@ -45,21 +45,21 @@ internal fun InteropListNested() {
                                 modifier = Modifier.width(250.dp).height(300.dp),
                                 parameter = js {
                                     "text"("ArkUI Button $index")
-                                    "backgroundColor"("#FF0000FF")
+                                    "backgroundColor"("#FFFF0000")
                                 }
                             )
                         }
 
-                        3 -> {
-                            ArkUIView(
-                                name = "horizontalList",
-                                modifier = Modifier.width(250.dp).height(300.dp),
-                                parameter = js {
-                                    "text"("ArkUI Button $index")
-                                    "backgroundColor"("#FFFF00FF")
-                                }
-                            )
-                        }
+//                        3 -> {
+//                            ArkUIView(
+//                                name = "horizontalList",
+//                                modifier = Modifier.width(250.dp).height(300.dp),
+//                                parameter = js {
+//                                    "text"("ArkUI Button $index")
+//                                    "backgroundColor"("#FFFF00FF")
+//                                }
+//                            )
+//                        }
 
                         else -> {
                             Button({
